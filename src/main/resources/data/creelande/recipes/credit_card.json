@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"bib",
+		"ipi",
+		"bib"
+	],
+	"key": {
+		"b": {
+			"item": "minecraft:book"
+		},
+		"i": {
+			"item": "minecraft:iron_block"
+		},
+		"p": {
+			"item": "creelande:phone"
+		}
+	},
+	"result": {
+		"item": "creelande:credit_card",
+		"count": 1
+	}
+}
