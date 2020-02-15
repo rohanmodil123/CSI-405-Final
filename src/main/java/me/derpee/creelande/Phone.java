@@ -27,7 +27,7 @@ public class Phone extends Item {
     }
 
     // Override default right click behavior
-    // Default believed to be blank i think
+    // Default believed to be blank i think, return held item in ActionResult
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
         if (world.isRemote) return new ActionResult(ActionResultType.SUCCESS, player.getHeldItem(hand));
