@@ -92,8 +92,10 @@ public class Creelande
                     //new Item(new Item.Properties().maxStackSize(1).group(ItemGroup.REDSTONE)).setRegistryName("creelande", "phone")
                     new Phone("phone", 1, ItemGroup.REDSTONE),
                     new Credit_Card("credit_card", 1, ItemGroup.TOOLS),
+                    new Supreme_Armor(ArmorMaterialList.SUPREME, EquipmentSlotType.HEAD, "clout_goggles", ItemGroup.COMBAT),
                     new Supreme_Armor(ArmorMaterialList.SUPREME, EquipmentSlotType.CHEST, "supreme_chestplate", ItemGroup.COMBAT),
-                    new Supreme_Armor(ArmorMaterialList.SUPREME, EquipmentSlotType.HEAD, "clout_goggles", ItemGroup.COMBAT)
+                    new Supreme_Armor(ArmorMaterialList.SUPREME, EquipmentSlotType.LEGS, "adidas_pants", ItemGroup.COMBAT),
+                    new Supreme_Armor(ArmorMaterialList.SUPREME, EquipmentSlotType.FEET, "yeezys", ItemGroup.COMBAT)
                     //new ArmorItem(ArmorMaterialList.SUPREME, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("supreme_chestplate")
             );
         }
