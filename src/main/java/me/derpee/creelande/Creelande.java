@@ -4,8 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.SoundEvents;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,7 +18,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ObjectHolder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.omg.DynamicAny.DynEnumHelper;
 
 import java.util.stream.Collectors;
 
@@ -91,12 +88,12 @@ public class Creelande
             event.getRegistry().registerAll(
                     //new Item(new Item.Properties().maxStackSize(1).group(ItemGroup.REDSTONE)).setRegistryName("creelande", "phone")
                     new Phone("phone", 1, ItemGroup.REDSTONE),
-                    new Credit_Card("credit_card", 1, ItemGroup.TOOLS),
-                    new Supreme_Armor(ArmorMaterialList.SUPREME, EquipmentSlotType.HEAD, "clout_goggles", ItemGroup.COMBAT),
-                    new Supreme_Armor(ArmorMaterialList.SUPREME, EquipmentSlotType.CHEST, "supreme_chestplate", ItemGroup.COMBAT),
-                    new Supreme_Armor(ArmorMaterialList.SUPREME, EquipmentSlotType.LEGS, "adidas_pants", ItemGroup.COMBAT),
-                    new Supreme_Armor(ArmorMaterialList.SUPREME, EquipmentSlotType.FEET, "yeezys", ItemGroup.COMBAT)
-                    //new ArmorItem(ArmorMaterialList.SUPREME, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("supreme_chestplate")
+                    new Daddys_Credit_Card("daddys_credit_card", 1, ItemGroup.TOOLS),
+                    new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.HEAD, "clout_goggles", ItemGroup.COMBAT),
+                    new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.CHEST, "superior_chestplate", ItemGroup.COMBAT),
+                    new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.LEGS, "adidas_pants", ItemGroup.COMBAT),
+                    new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.FEET, "yeezys", ItemGroup.COMBAT)
+                    //new ArmorItem(ArmorMaterialList.SUPERIOR, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("supreme_chestplate")
             );
         }
     }
