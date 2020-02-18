@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "creelande:item/credit_card"
+		"layer0": "creelande:item/daddys_credit_card"
 	}
 }
