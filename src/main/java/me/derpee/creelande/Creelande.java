@@ -90,6 +90,7 @@ public class Creelande
             event.getRegistry().registerAll(
                     // Register new Items.
                     new Phone("phone", 1, ItemGroup.REDSTONE),
+                    new Classical_Diploma("classical_diploma", 1, ItemGroup.DECORATIONS),
                     new Plausible_Burger("plausible_burger", 1, ItemGroup.FOOD),
                     new Daddys_Credit_Card("daddys_credit_card", 1, ItemGroup.TOOLS),
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.HEAD, "clout_goggles", ItemGroup.COMBAT),
