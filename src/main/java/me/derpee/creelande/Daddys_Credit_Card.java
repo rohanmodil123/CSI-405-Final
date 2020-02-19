@@ -1,6 +1,5 @@
 package me.derpee.creelande;
 
-import net.minecraft.item.Foods;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 
