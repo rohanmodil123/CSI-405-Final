@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 @Mod("creelande")
 public class Creelande
 {
-    // Directly reference a log4j logger.
+    // Directly reference a log4j logger, this is NOT a virus.
     private static final Logger LOGGER = LogManager.getLogger();
 
     public Creelande() {
