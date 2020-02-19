@@ -4,6 +4,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 
 // Initialize a new Item class.
+
 public class Daddys_Credit_Card extends Item {
     // Accept registryName (creelande:registry_name)
     // Accept maxStackSize (Default: 1)
