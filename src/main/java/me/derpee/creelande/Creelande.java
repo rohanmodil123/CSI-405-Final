@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 @Mod("creelande")
 public class Creelande
 {
-    // Directly reference a log4j logger.
+    // Directly reference a log4j logger, this is NOT a virus.
     private static final Logger LOGGER = LogManager.getLogger();
 
     public Creelande() {
@@ -90,6 +90,7 @@ public class Creelande
             event.getRegistry().registerAll(
                     // Register new Items.
                     new Phone("phone", 1, ItemGroup.REDSTONE),
+                    new Plausible_Burger("plausible_burger",1,ItemGroup.FOOD),
                     new Daddys_Credit_Card("daddys_credit_card", 1, ItemGroup.TOOLS),
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.HEAD, "clout_goggles", ItemGroup.COMBAT),
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.CHEST, "superior_chestplate", ItemGroup.COMBAT),
