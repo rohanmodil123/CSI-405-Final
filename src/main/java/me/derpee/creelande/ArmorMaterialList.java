@@ -10,9 +10,10 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 
 public enum ArmorMaterialList implements IArmorMaterial {
-    // oh yesssss!
+    // Create new armor material enum.
     SUPERIOR("superior", 1, new int[]{1, 1, 1, 1}, 2, Items.LEATHER, "item.armor.equip_leather", 0.0f);
 
+    // Variables to write to during main constructor run.
     private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
     private String name;
     private int durability;
@@ -22,6 +23,7 @@ public enum ArmorMaterialList implements IArmorMaterial {
     private String equipSound;
     private float toughness;
 
+    // Main constructor.
     private ArmorMaterialList(String name, int durability, int[] damageReductionAmounts, int enchantability, Item repairItem, String equipSound, float toughness) {
         this.name = name;
         this.equipSound = equipSound;
@@ -32,6 +34,7 @@ public enum ArmorMaterialList implements IArmorMaterial {
         this.toughness = toughness;
     }
 
+    // Override Minecraft IArmorMaterial functions.
     @Override
     public int getDurability(EquipmentSlotType slotIn) {
         return max_damage_array[slotIn.getIndex()] * this.durability;
