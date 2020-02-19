@@ -9,7 +9,8 @@ public class Plausible_Burger extends Item{
     // Accept group (Example: ItemGroup.CREATIVE)
 
     public Plausible_Burger(String registryName, int MaxStackSize, ItemGroup group) {
-      super(new Item.Properties().maxStackSize(MaxStackSize).group(group));
+      super(new Item.Properties().maxStackSize(MaxStackSize).group(group).food(ModFoods.PLAUSIBLE_BURGER));
+      // Associates this Plausible_Burger with the Food Property PLAUSIBLE_BURGER
         this.setRegistryName("creelande", registryName);
     }
 }
