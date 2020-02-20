@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 
@@ -38,17 +39,26 @@ public class Classical_Diploma extends Item {
         PlayerInventory inventory = player.inventory;
 
         //Create string of latin things to say
-        String[] quotes = {"Aut viam inveniam aut faciam tibi", "Ostendes tuum et ostendam meus?", "Ars longa vita brevis", "Vultus est index animi", "Nomen est omen", "Quot homines tot sententiae: suus cuique mos", "Caelesti sumus omnes semine oriundi.", "Nam risu inepto res ineptior nulla est", "Mens sana in corpore sano", "Timendi causa est nescire", "Possunt, quia posse videntur", "Ingenio maximus, arte rudis.", "Moriamur, et in media arma ruamus", "Memento audace semper", "Stultus est sicut stultus facit", "Non torsii subligarium", "Bis dat, qui dat celeriter.", "Patientia comes est sapientiae", "Homo sum: humani nihil a me alienum puto", "Qui dormit, non peccat", "Tanta stultitia mortalium est", "Credo quia absurdum", "Vos have a valde parva caput, sed etiam magnum nasum", "Vos have a valde parva caput, sed etiam magnum nasum", "Mater tua et uxor mea"};
+        String[] quotes = {"Aut viam inveniam aut faciam tibi", "Ostendes tuum et ostendam meus?", "Ars longa vita brevis", "Vultus est index animi", "Nomen est omen", "Quot homines tot sententiae: suus cuique mos", "Caelesti sumus omnes semine oriundi.", "Nam risu inepto res ineptior nulla est", "Mens sana in corpore sano", "Timendi causa est nescire", "Possunt, quia posse videntur", "Ingenio maximus, arte rudis.", "Moriamur, et in media arma ruamus", "Memento audace semper", "Stultus est sicut stultus facit", "Non torsii subligarium", "Bis dat, qui dat celeriter.", "Patientia comes est sapientiae", "Homo sum: humani nihil a me alienum puto", "Qui dormit, non peccat", "Tanta stultitia mortalium est", "Credo quia absurdum", "Habes a valde parva caput, sed etiam magnum nasum", "Habes a valde parva caput, sed etiam magnum nasum", "Mater tua est uxor mea"};
 
         //pick random quote from the array
         int randQuote = (int) (Math.random() * quotes.length);
         int rand14 = (int) (Math.random() * 8);
+        // Gets the name of the user and stores in the String PlayerName
+        String PlayerName = player.getName().getString();
+
         // 75 percent of time it will send a random quote, other will send "Quid Quid"
         if (rand14 != 1) {
-            player.sendMessage(new StringTextComponent(quotes[randQuote]));
+            // sets all the data into a StringTextComponent, and will send them out, with the PlayerName included.
+            StringTextComponent latinQuote = (new StringTextComponent(quotes[randQuote]));
+            StringTextComponent latinMessage = (new StringTextComponent("<" + PlayerName + "> " + latinQuote.getText()));
+            player.sendMessage(latinMessage);
+
         } else {
-            player.sendMessage(new StringTextComponent("Quid Quid"));
+            player.sendMessage(new StringTextComponent("<" + PlayerName + "> " + "Quid Quid"));
         }
+        /* doesn't matter what it returns, this return type is needed for the @overwrite right-click functionality.
+           I blame forge for it being so dumb */
         return new ActionResult(ActionResultType.SUCCESS, player.getHeldItem(hand));
     }
 }

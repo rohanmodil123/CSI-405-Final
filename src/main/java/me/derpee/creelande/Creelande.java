@@ -102,8 +102,8 @@ public class Creelande
                     new Daddys_Credit_Card("daddys_credit_card", 1, ItemGroup.TOOLS),
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.HEAD, "clout_goggles", ItemGroup.COMBAT),
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.CHEST, "superior_chestplate", ItemGroup.COMBAT),
-                    new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.LEGS, "adidas_pants", ItemGroup.COMBAT),
-                    new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.FEET, "yeezys", ItemGroup.COMBAT)
+                    new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.LEGS, "adeedas_pants", ItemGroup.COMBAT),
+                    new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.FEET, "yiezys", ItemGroup.COMBAT)
             );
         }
     }

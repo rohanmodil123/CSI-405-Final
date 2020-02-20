@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "creelande:item/yeezys"
+		"layer0": "creelande:item/adeedas_pants"
 	}
 }
