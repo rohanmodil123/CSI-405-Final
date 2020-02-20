@@ -34,7 +34,9 @@ public class Creelande
 {
     // Directly reference a log4j logger, this is NOT a virus.
     private static final Logger LOGGER = LogManager.getLogger();
-
+    // Next two lines register CASH as creelande.cash, for addStack method uses.
+    @ObjectHolder("creelande" + ":cash")
+    public static Item CASH;
     public Creelande() {
         // Register the setup method for modloading.
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -97,7 +99,8 @@ public class Creelande
             event.getRegistry().registerAll(
                     // Register new Items.
                     new Phone("phone", 1, ItemGroup.REDSTONE),
-                    new Classical_Diploma("classical_diploma", 1, ItemGroup.DECORATIONS),
+                    new Cash("cash",50, ItemGroup.TOOLS),
+                    new Classical_Diploma("classical_diploma", 1, ItemGroup.MISC),
                     new Plausible_Burger("plausible_burger", 16, ItemGroup.FOOD),
                     new Daddys_Credit_Card("daddys_credit_card", 1, ItemGroup.TOOLS),
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.HEAD, "clout_goggles", ItemGroup.COMBAT),
