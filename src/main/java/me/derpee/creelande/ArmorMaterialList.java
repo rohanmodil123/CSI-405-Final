@@ -11,7 +11,8 @@ import net.minecraft.util.SoundEvents;
 
 public enum ArmorMaterialList implements IArmorMaterial {
     // Create new armor material enum.
-    SUPERIOR("superior", 1, new int[]{1, 1, 1, 1}, 2, Items.LEATHER, "item.armor.equip_leather", 0.0f);
+    SUPERIOR("superior", 1, new int[]{1, 1, 1, 1}, 2, Items.LEATHER, "item.armor.equip_leather", 0.0f),
+    AYRE("ayre", 1, new int[]{1, 1, 1, 1}, 2, Items.IRON_INGOT, "item.armor.equip_iron", 0.0f);
 
     // Variables to write to during main constructor run.
     private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
