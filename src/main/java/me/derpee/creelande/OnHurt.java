@@ -13,7 +13,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 public class OnHurt {
     // The following method will run when an entity is hurt.
     @SubscribeEvent
-    public void dropDiamonds(LivingHurtEvent event) {
+    public void interceptHurt(LivingHurtEvent event) {
         // If damaged entity is an animal.
         if (!(event.getEntity() instanceof AnimalEntity)) {
             return;
