@@ -50,7 +50,6 @@ public class Classical_Diploma extends Item {
             StringTextComponent latinQuote = (new StringTextComponent(quotes[randQuote]));
             StringTextComponent latinMessage = (new StringTextComponent("<" + PlayerName + "> " + latinQuote.getText()));
             player.sendMessage(latinMessage);
-
         } else {
             player.sendMessage(new StringTextComponent("<" + PlayerName + "> " + "Quid Quid"));
         }

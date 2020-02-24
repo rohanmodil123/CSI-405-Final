@@ -106,7 +106,8 @@ public class Creelande
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.HEAD, "clout_goggles", ItemGroup.COMBAT),
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.CHEST, "superior_chestplate", ItemGroup.COMBAT),
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.LEGS, "adeedas_pants", ItemGroup.COMBAT),
-                    new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.FEET, "yiezys", ItemGroup.COMBAT)
+                    new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.FEET, "yiezys", ItemGroup.COMBAT),
+                    new Ayre_Armor(ArmorMaterialList.AYRE, EquipmentSlotType.HEAD, "ayre_pods", ItemGroup.COMBAT)
             );
         }
     }
