@@ -35,9 +35,6 @@ public class Classical_Diploma extends Item {
         // Do not run on server. (Singleplayer only)
         if (world.isRemote) return new ActionResult(ActionResultType.SUCCESS, player.getHeldItem(hand));
 
-        // Creates PlayerInventory named inventory, and setting player.inventory to it.
-        PlayerInventory inventory = player.inventory;
-
         //Create string of latin things to say
         String[] quotes = {"Aut viam inveniam aut faciam tibi", "Ostendes tuum et ostendam meus?", "Ars longa vita brevis", "Vultus est index animi", "Nomen est omen", "Quot homines tot sententiae: suus cuique mos", "Caelesti sumus omnes semine oriundi.", "Nam risu inepto res ineptior nulla est", "Mens sana in corpore sano", "Timendi causa est nescire", "Possunt, quia posse videntur", "Ingenio maximus, arte rudis.", "Moriamur, et in media arma ruamus", "Memento audace semper", "Stultus est sicut stultus facit", "Non torsii subligarium", "Bis dat, qui dat celeriter.", "Patientia comes est sapientiae", "Homo sum: humani nihil a me alienum puto", "Qui dormit, non peccat", "Tanta stultitia mortalium est", "Credo quia absurdum", "Habes a valde parva caput, sed etiam magnum nasum", "Habes a valde parva caput, sed etiam magnum nasum", "Mater tua est uxor mea"};
 
@@ -56,7 +53,7 @@ public class Classical_Diploma extends Item {
         } else {
             player.sendMessage(new StringTextComponent("<" + PlayerName + "> " + "Quid Quid"));
         }
-        /* doesn't matter what it returns, this return type is needed for the @overwrite right-click functionality.
+        /* doesn't matter what it returns, this return type is needed for the @override right-click functionality.
            I blame forge for it being so dumb */
         return new ActionResult(ActionResultType.SUCCESS, player.getHeldItem(hand));
     }
