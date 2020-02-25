@@ -1,3 +1,5 @@
+![Banner][banner]
+
 # Creelande
 
 Adds new and interesting survival twists to Minecraft.
