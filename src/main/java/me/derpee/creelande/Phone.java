@@ -87,16 +87,16 @@ public class Phone extends Item {
             // If player has sufficient funds.
             if (hasIronIngot) {
                 // Give Player Item, and remove Iron Ingot, show success message in chat.
-                player.sendMessage(new StringTextComponent(ChatFormatting.RED + "Phone" + ChatFormatting.GRAY + ">" + ChatFormatting.WHITE + " Enjoy!"));
+                player.sendMessage(new StringTextComponent(ChatFormatting.RED + "DoreDush" + ChatFormatting.GRAY + ">" + ChatFormatting.WHITE + " Enjoy!"));
                 inventory.addItemStackToInventory(new ItemStack(chosenItem, 1));
                 inventory.getStackInSlot(ironSlot).setCount(inventory.getStackInSlot(ironSlot).getCount() - 1);
             } else {
                 // Show error message in chat.
-                player.sendMessage(new StringTextComponent(ChatFormatting.RED + "Phone" + ChatFormatting.GRAY + ">" + ChatFormatting.WHITE + " Not enough funds!"));
+                player.sendMessage(new StringTextComponent(ChatFormatting.RED + "DoreDush" + ChatFormatting.GRAY + ">" + ChatFormatting.WHITE + " Not enough funds!"));
             }
         } else {
             // Show error message in chat.
-            player.sendMessage(new StringTextComponent(ChatFormatting.RED + "Phone" + ChatFormatting.GRAY + ">" + ChatFormatting.WHITE + " Not enough inventory space!"));
+            player.sendMessage(new StringTextComponent(ChatFormatting.RED + "DoreDush" + ChatFormatting.GRAY + ">" + ChatFormatting.WHITE + " Not enough inventory space!"));
         }
 
         // Return held Item.
