@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "r r",
+    "cmc",
+    "ccc"
+  ],
+  "key": {
+    "r": {
+      "item": "minecraft:redstone_block"
+    },
+    "c": {
+      "item": "creelande:cash"
+    },
+    "m": {
+      "item": "minecraft:minecart"
+    }
+  },
+  "result": {
+    "item": "creelande:tes_la_car",
+    "count": 1
+  }
+}

@@ -11,6 +11,7 @@ import net.minecraft.potion.Effects;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -47,8 +48,11 @@ public class OverrideMeat {
         // Get the Player, and play a sound to them.
         // Also apply potion effects to the player.
         // Also send a chat message to the player.
+        World world = event.getEntity().world;
         PlayerEntity player = (PlayerEntity)entity;
-        player.playSound(new SoundEvent(new ResourceLocation("block.anvil.hit")), 1.0f, 1.0f);
+
+        //player.playSound(new SoundEvent(new ResourceLocation("block.anvil.hit")), 1.0f, 1.0f);
+
         player.sendMessage(new StringTextComponent(ChatFormatting.GOLD + "Creelande" + ChatFormatting.GRAY + ">" + ChatFormatting.WHITE + " How dare you!"));
 
         EffectInstance blindness = new EffectInstance(Effects.BLINDNESS, 60, 3, false, false);

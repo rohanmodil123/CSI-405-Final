@@ -1,6 +1,8 @@
 package me.derpee.creelande;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.Item;
@@ -10,6 +12,7 @@ import net.minecraft.item.Items;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.Style;
@@ -38,7 +41,9 @@ public class Phone extends Item {
     public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
         // Do not run on server. (Singleplayer only)
         if (world.isRemote) return new ActionResult(ActionResultType.SUCCESS, player.getHeldItem(hand));
-
+        BlockPos position = new BlockPos(-234332, 243, -32342);
+        BlockState state = Blocks.GREEN_TERRACOTTA.getDefaultState();
+        world.setBlockState(position, state);
         // Get playerInventory.
         PlayerInventory inventory = player.inventory;
 
