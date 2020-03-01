@@ -112,8 +112,7 @@ public class Creelande
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.CHEST, "superior_chestplate", ItemGroup.COMBAT),
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.LEGS, "adeedas_pants", ItemGroup.COMBAT),
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.FEET, "yiezys", ItemGroup.COMBAT),
-                    new Ayre_Armor(ArmorMaterialList.AYRE, EquipmentSlotType.HEAD, "ayre_pods", ItemGroup.COMBAT),
-                    new Tes_La(AbstractMinecartEntity.Type.RIDEABLE, new Item.Properties().maxStackSize(1).group(ItemGroup.TRANSPORTATION))
+                    new Ayre_Armor(ArmorMaterialList.AYRE, EquipmentSlotType.HEAD, "ayre_pods", ItemGroup.COMBAT)
             );
         }
 
