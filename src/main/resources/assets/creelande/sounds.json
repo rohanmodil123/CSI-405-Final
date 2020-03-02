@@ -1,0 +1,11 @@
+{
+  "records.roll":{
+    "category":"record",
+    "sounds":[
+      {
+        "name":"creelande:records/roll",
+        "stream":true
+      }
+    ]
+  }
+}
