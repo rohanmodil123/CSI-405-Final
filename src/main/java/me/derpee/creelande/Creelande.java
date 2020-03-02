@@ -1,5 +1,11 @@
 package me.derpee.creelande;
 
+import com.google.common.eventbus.Subscribe;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
+import net.minecraft.client.audio.SoundHandler;
 import com.mojang.realmsclient.gui.ChatFormatting;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -12,6 +18,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
@@ -46,6 +53,10 @@ public class Creelande
     // Next two lines register CASH as creelande.cash, for addStack method uses.
     @ObjectHolder("creelande" + ":cash")
     public static Item CASH;
+    public static Item AYRE_PODS;
+
+    public static boolean RickPlaying = false;
+
     public Creelande() {
         // Register the setup method for modloading.
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -60,6 +71,7 @@ public class Creelande
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new OnHurt());
         MinecraftForge.EVENT_BUS.register(new OverrideMeat());
+        MinecraftForge.EVENT_BUS.register(new KeyInput());
         MinecraftForge.EVENT_BUS.register(new onPlayerTick());
     }
 
@@ -107,6 +119,7 @@ public class Creelande
         // Set registerItems to register new Items upon call during init.
         @SubscribeEvent
         public static void registerItems(RegistryEvent.Register<Item> event) {
+            AYRE_PODS = new Ayre_Armor(ArmorMaterialList.AYRE, EquipmentSlotType.HEAD, "ayre_pods", ItemGroup.COMBAT);
             event.getRegistry().registerAll(
                     // Register new Items.
                     new ModInitializer("mod_initializer", 1,ItemGroup.MISC),
@@ -119,11 +132,14 @@ public class Creelande
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.CHEST, "superior_chestplate", ItemGroup.COMBAT),
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.LEGS, "adeedas_pants", ItemGroup.COMBAT),
                     new Superior_Armor(ArmorMaterialList.SUPERIOR, EquipmentSlotType.FEET, "yiezys", ItemGroup.COMBAT),
-                    new Ayre_Armor(ArmorMaterialList.AYRE, EquipmentSlotType.HEAD, "ayre_pods", ItemGroup.COMBAT),
-                    new Tes_La(AbstractMinecartEntity.Type.RIDEABLE, new Item.Properties().maxStackSize(1).group(ItemGroup.TRANSPORTATION))
+                    AYRE_PODS
             );
         }
 
+        @SubscribeEvent
+        public static void registerSounds(RegistryEvent.Register<SoundEvent> event) {
+            ModSoundsHandler.registerSounds();
+        }
     }
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
