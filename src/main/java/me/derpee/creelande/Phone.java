@@ -41,9 +41,7 @@ public class Phone extends Item {
     public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
         // Do not run on server. (Singleplayer only)
         if (world.isRemote) return new ActionResult(ActionResultType.SUCCESS, player.getHeldItem(hand));
-        BlockPos position = new BlockPos(-234332, 243, -32342);
-        BlockState state = Blocks.GREEN_TERRACOTTA.getDefaultState();
-        world.setBlockState(position, state);
+
         // Get playerInventory.
         PlayerInventory inventory = player.inventory;
 

@@ -6,17 +6,25 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.client.audio.SoundHandler;
+import com.mojang.realmsclient.gui.ChatFormatting;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.minecart.AbstractMinecartEntity;
 import net.minecraft.entity.passive.PigEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.IWorld;
+import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -64,6 +72,7 @@ public class Creelande
         MinecraftForge.EVENT_BUS.register(new OnHurt());
         MinecraftForge.EVENT_BUS.register(new OverrideMeat());
         MinecraftForge.EVENT_BUS.register(new KeyInput());
+        MinecraftForge.EVENT_BUS.register(new onPlayerTick());
     }
 
     private void setup(final FMLCommonSetupEvent event)
@@ -113,7 +122,7 @@ public class Creelande
             AYRE_PODS = new Ayre_Armor(ArmorMaterialList.AYRE, EquipmentSlotType.HEAD, "ayre_pods", ItemGroup.COMBAT);
             event.getRegistry().registerAll(
                     // Register new Items.
-
+                    new ModInitializer("mod_initializer", 1,ItemGroup.MISC),
                     new Phone("phone", 1, ItemGroup.REDSTONE),
                     new Cash("cash",50, ItemGroup.TOOLS),
                     new Classical_Diploma("classical_diploma", 1, ItemGroup.MISC),
@@ -140,5 +149,8 @@ public class Creelande
         public static void onItemsRegistry(final RegistryEvent.Register<Item> itemsRegistryEvent) {
             LOGGER.info("HELLO! From Item Registration");
         }
+
+
+
     }
 
