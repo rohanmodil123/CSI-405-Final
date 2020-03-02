@@ -1,11 +1,15 @@
 package me.derpee.creelande;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.MinecraftGame;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.world.World;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -48,3 +52,4 @@ public class OnHurt {
         }
     }
 }
+
