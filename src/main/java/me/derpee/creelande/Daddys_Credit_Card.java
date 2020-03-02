@@ -23,18 +23,18 @@ public class Daddys_Credit_Card extends Item {
 
     @Override
 
-    //uses any world, only works when a player uses it, and either hand works.
-    public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
+        //uses any world, only works when a player uses it, and either hand works.
+        public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
 
-        // Do not run on server. (Singleplayer only)
-        if (world.isRemote) return new ActionResult(ActionResultType.SUCCESS, player.getHeldItem(hand));
-
-
+            // Do not run on server. (Singleplayer only)
+            if (world.isRemote) return new ActionResult(ActionResultType.SUCCESS, player.getHeldItem(hand));
 
 
 
-        // Get playerInventory.
-        PlayerInventory inventory = player.inventory;
+
+
+            // Get playerInventory.
+            PlayerInventory inventory = player.inventory;
 
         inventory.addItemStackToInventory(new ItemStack(Creelande.CASH, 20));
 

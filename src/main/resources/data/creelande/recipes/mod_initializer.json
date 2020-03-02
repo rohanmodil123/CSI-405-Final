@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "d  ",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "d": {
+      "item": "minecraft:dirt"
+    }
+  },
+      "result": {
+        "item": "creelande:mod_initializer",
+        "count": 1
+      }
+    }
