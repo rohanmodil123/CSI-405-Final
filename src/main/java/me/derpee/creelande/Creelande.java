@@ -72,6 +72,7 @@ public class Creelande
         MinecraftForge.EVENT_BUS.register(new OnHurt());
         MinecraftForge.EVENT_BUS.register(new OverrideMeat());
         MinecraftForge.EVENT_BUS.register(new KeyInput());
+
     }
 
     private void setup(final FMLCommonSetupEvent event)
